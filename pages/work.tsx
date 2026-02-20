@@ -42,7 +42,7 @@ export default function Work() {
 
             <h1 className="display" style={{
               fontFamily: "'Syne', sans-serif", fontWeight: 800,
-              fontSize: 'clamp(72px, 12vw, 160px)', lineHeight: 0.88,
+              fontSize: 'clamp(56px, 9vw, 120px)', lineHeight: 0.9,
               color: 'var(--star)', letterSpacing: '-0.03em',
             }}>
               Experience
