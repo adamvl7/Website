@@ -30,7 +30,7 @@ export default function BigBang({ onComplete }: { onComplete: () => void }) {
       current++
       setStep(current)
       if (current < COUNTDOWN_STEPS.length - 1) {
-        setTimeout(tick, 420)
+        setTimeout(tick, 300)
       } else {
         // T-0 — launch sequence
         setTimeout(() => {
@@ -39,9 +39,9 @@ export default function BigBang({ onComplete }: { onComplete: () => void }) {
           setTimeout(() => setGlitch(false), 300)
           setTimeout(() => {
             setFadeOut(true)
-            setTimeout(onComplete, 700)
-          }, 900)
-        }, 500)
+            setTimeout(onComplete, 450)
+          }, 650)
+        }, 320)
       }
     }
     setTimeout(tick, 300)
