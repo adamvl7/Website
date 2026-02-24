@@ -259,24 +259,11 @@ export default function Home() {
                   overflow: 'hidden',
                 }}>
                   <img
-                    src="/photo.jpg"
+                    src="/images/Me.png"
                     alt="Adam Le"
                     style={{ width: '100%', height: '100%', objectFit: 'cover', objectPosition: 'top' }}
                     onError={(e) => { e.currentTarget.style.display = 'none' }}
                   />
-                  <div style={{
-                    position: 'absolute', inset: 0,
-                    display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center',
-                    gap: '8px',
-                  }}>
-                    <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="rgba(10,10,15,0.2)" strokeWidth="1">
-                      <circle cx="12" cy="8" r="4" />
-                      <path d="M4 20c0-4 3.6-7 8-7s8 3 8 7" />
-                    </svg>
-                    <span style={{ fontFamily: "'Syne Mono', monospace", fontSize: '9px', letterSpacing: '0.18em', color: 'rgba(10,10,15,0.25)' }}>
-                      ADD PHOTO.JPG TO /PUBLIC
-                    </span>
-                  </div>
                   <div style={{
                     position: 'absolute', inset: 0,
                     backgroundImage: 'repeating-linear-gradient(0deg, transparent, transparent 3px, rgba(10,10,15,0.015) 3px, rgba(10,10,15,0.015) 4px)',
@@ -394,3 +381,4 @@ export default function Home() {
     </>
   )
 }
+

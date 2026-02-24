@@ -6,9 +6,14 @@ const works = [
     no: '001',
     name: 'Contractor',
     role: 'Full Stack Engineer',
-    description: 'Designed and developed a user-friendly website using Wix to showcase 3D-printed educational toys distributed to under-resourced students, customizing layouts and product descriptions to create an engaging experience. Improved visibility and engagement with the toy program by enabling teachers and families to preview available educational toys online, leading to broader access and faster distribution.',
-    tags: ['HTML', 'CSS', 'JavaScript', 'WIX'],
-    status: 'ARCHIVED', year: '2022 â€“ 2023',
+    description: 'Contributed to student data migration and infrastructure reliability improvements using Python and AWS services.',
+    bullets: [
+      'Developed a Python script to migrate 2,000+ student records from locally stored CSV files to an AWS RDS database, reducing manual spreadsheet processing time by approximately 60%.',
+      'Implemented data validation checks for missing fields, duplicate student IDs, and inconsistent date formatting, improving data consistency and preventing import errors during migration.',
+      'Assisted in configuring AWS RDS and automated S3 backups under IT supervision, improving data reliability and reducing dependency on on-premise storage.',
+    ],
+    tags: ['Python', 'Amazon Relational Database Service (RDS)', 'SQL', 'CSV Data Processing', 'Data Validation'],
+    status: 'ARCHIVED', year: 'May 2024 - June 2024',
   },
 ]
 
@@ -24,10 +29,10 @@ export default function Work() {
 
   return (
     <>
-      <Head><title>Experience â€” Your Name</title></Head>
+      <Head><title>Experience — Your Name</title></Head>
       <div className="page">
 
-        {/* â”€â”€ HERO â”€â”€ */}
+        {/* —— HERO —— */}
         <section style={{ paddingTop: '56px', position: 'relative', overflow: 'hidden' }}>
           <div style={{ padding: '72px 48px 48px' }}>
             <div style={{ display: 'flex', alignItems: 'center', gap: '10px', marginBottom: '28px' }}>
@@ -63,7 +68,7 @@ export default function Work() {
           }} />
         </section>
 
-        {/* â”€â”€ TABLE â”€â”€ */}
+        {/* —— TABLE —— */}
         <section style={{ padding: '0 48px 100px' }}>
           {/* Column headers */}
           <div className="mono" style={{
@@ -112,6 +117,13 @@ export default function Work() {
                   <p style={{ fontSize: '13px', color: 'var(--star-dim)', lineHeight: 1.7, fontWeight: 300, marginBottom: '12px' }}>
                     {w.description}
                   </p>
+                  <ul style={{ listStyle: 'disc', paddingLeft: '18px', marginBottom: '12px' }}>
+                    {(w.bullets ?? []).map(point => (
+                      <li key={point} style={{ fontSize: '13px', color: 'var(--star-dim)', lineHeight: 1.7, fontWeight: 300, marginBottom: '6px' }}>
+                        {point}
+                      </li>
+                    ))}
+                  </ul>
                   <div style={{ display: 'flex', flexWrap: 'wrap', gap: '6px' }}>
                     {w.tags.map(t => <span key={t} className="tag">{t}</span>)}
                   </div>
@@ -135,7 +147,7 @@ export default function Work() {
                   {[
                     { label: 'Role', value: w.role },
                     { label: 'Period', value: w.year },
-                    { label: 'Stack', value: w.tags.join(' Â· ') },
+                    { label: 'Stack', value: w.tags.join(' · ') },
                   ].map(item => (
                     <div key={item.label}>
                       <p className="mono" style={{ fontSize: '9px', letterSpacing: '0.14em', color: 'var(--star-faint)', marginBottom: '6px' }}>
@@ -151,7 +163,7 @@ export default function Work() {
         </section>
 
         <footer style={{ padding: '32px 48px', display: 'flex', justifyContent: 'space-between' }}>
-          <span className="mono" style={{ fontSize: '9px', color: 'var(--star-faint)', letterSpacing: '0.1em' }}>Â© 2025 ADAM LE</span>
+          <span className="mono" style={{ fontSize: '9px', color: 'var(--star-faint)', letterSpacing: '0.1em' }}>© 2025 ADAM LE</span>
         </footer>
       </div>
     </>
