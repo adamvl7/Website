@@ -29,10 +29,10 @@ export default function Work() {
 
   return (
     <>
-      <Head><title>Experience — Your Name</title></Head>
+      <Head><title>Experience - Your Name</title></Head>
       <div className="page">
 
-        {/* —— HERO —— */}
+        {/* HERO */}
         <section style={{ paddingTop: '56px', position: 'relative', overflow: 'hidden' }}>
           <div style={{ padding: '72px 48px 48px' }}>
             <div style={{ display: 'flex', alignItems: 'center', gap: '10px', marginBottom: '28px' }}>
@@ -68,7 +68,7 @@ export default function Work() {
           }} />
         </section>
 
-        {/* —— TABLE —— */}
+        {/* TABLE */}
         <section style={{ padding: '0 48px 100px' }}>
           {/* Column headers */}
           <div className="mono" style={{
@@ -147,7 +147,7 @@ export default function Work() {
                   {[
                     { label: 'Role', value: w.role },
                     { label: 'Period', value: w.year },
-                    { label: 'Stack', value: w.tags.join(' · ') },
+                    { label: 'Stack', value: w.tags.join(' | ') },
                   ].map(item => (
                     <div key={item.label}>
                       <p className="mono" style={{ fontSize: '9px', letterSpacing: '0.14em', color: 'var(--star-faint)', marginBottom: '6px' }}>
@@ -163,7 +163,7 @@ export default function Work() {
         </section>
 
         <footer style={{ padding: '32px 48px', display: 'flex', justifyContent: 'space-between' }}>
-          <span className="mono" style={{ fontSize: '9px', color: 'var(--star-faint)', letterSpacing: '0.1em' }}>© 2025 ADAM LE</span>
+          <span className="mono" style={{ fontSize: '9px', color: 'var(--star-faint)', letterSpacing: '0.1em' }}>(c) 2025 ADAM LE</span>
         </footer>
       </div>
     </>
